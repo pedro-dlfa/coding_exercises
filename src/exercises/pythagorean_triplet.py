@@ -1,11 +1,12 @@
 class Solution:
-    """ Find a pythagorean triplet in an array
+    """Find a pythagorean triplet in an array
 
     Given an array of integers, write a function that returns true if there is a triplet (a, b, c)
     that satisfies a^2 + b^2 = c^2.
 
     Find more details on: https://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/
     """
+
     @staticmethod
     def check_triplet(arr):
         # Sort array in descending order

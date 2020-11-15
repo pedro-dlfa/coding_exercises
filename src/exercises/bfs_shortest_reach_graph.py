@@ -2,7 +2,7 @@ from collections import defaultdict, deque
 
 
 class Graph:
-    """ BFS: Shortest Reach in a Graph
+    """BFS: Shortest Reach in a Graph
 
     Consider an undirected graph consisting of 'n' nodes where each node is labeled from '1' to 'n' and the edge
     between any two nodes is always of length '6'. We define node 's' to be the starting position for a BFS.

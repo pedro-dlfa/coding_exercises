@@ -21,7 +21,6 @@ testcases_no = int(len([name for name in os.listdir(testcases_files_path)]) / 2)
     ],
 )
 def test_pythagorean_triplet__test_cases(testfile_in, testfile_out):
-
     with open(testfile_out) as tf_out:
         expected_result = tf_out.read()
 
@@ -31,7 +30,3 @@ def test_pythagorean_triplet__test_cases(testfile_in, testfile_out):
         ans = Solution.check_triplet(arr)
         actual_result = "Yes" if ans else "No"
         assert actual_result == expected_result
-
-
-
-
