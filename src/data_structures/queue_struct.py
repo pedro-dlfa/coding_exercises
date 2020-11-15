@@ -2,7 +2,7 @@ from collections import deque
 
 
 class Queue:
-    """ Queue structure
+    """Queue structure
 
     Basic implementation of Queue data structure, where inserted items are stored at the end of the structure
     and removed items are deleted from the beginning of the data structure.

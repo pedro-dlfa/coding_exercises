@@ -2,7 +2,7 @@ from collections import deque
 
 
 class Stack:
-    """ Stack structure
+    """Stack structure
 
     Basic implementation of Stack data structure, where inserted items are stored at the end
     of the structure and removed items are deleted from the end of the data structure.
