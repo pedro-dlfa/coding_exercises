@@ -19,10 +19,17 @@ class Graph:
             self.nodes_dict[i] = set()
 
     def connect(self, x, y):
+        """
+        Interconnects the given two graph nodes
+        """
         self.nodes_dict[x].add(y)
         self.nodes_dict[y].add(x)
 
     def find_all_distances(self, start_node):
+        """
+        Finds and prints the distances for all nodes interconnected with the given 'start_node'
+        If the given node is not connected to any of the nodes, the printed distance is '-1'
+        """
         q = deque()
         q.append((start_node, 0))
         weights = defaultdict(lambda: -1)
@@ -42,14 +49,3 @@ class Graph:
             if start_node != node:
                 distances.append(str(weights[node]))
         print(" ".join(distances))
-
-
-t = int(input())
-for i in range(t):
-    n, m = [int(value) for value in input().split()]
-    graph = Graph(n)
-    for i in range(m):
-        x, y = [int(x) for x in input().split()]
-        graph.connect(x - 1, y - 1)
-    s = int(input())
-    graph.find_all_distances(s - 1)
