@@ -1,20 +1,15 @@
 from typing import Callable
 
-""" Basic quicksort implementation
+""" Mergesort implementation
 
-This quicksort implementation selects the last element of the array as a pivot for the array partitioning for the
-subsequent recursive sorting of:
- - sub-array with elements smaller than the pivot, and
- - sub-array with elements greater than the pivot
+Mergesort performs as follows:
+ - First, finds a mid point and partitions the array in two halves
+ - Then sorts recursively the two halves
+ - Finally, places the sorted elements from the two halves in the right order in the array
 
-This implementation has an average time complexity of O(n·log n). Best case complexity is also O(n·log n).
-However, worst case performance of this implementation is O(n^2), and it takes places on arrays already
-sorted in increasing or decreasing order.
+This implementation has an average time complexity of O(n·log n). Best and worst cases complexity are also O(n·log n).
 
-Other quicksort implementations overcome this issue by selecting as pivot:
- - middle element in the array
- - median element
- - a random element
+Mergesort is stable. It means: elements with same value are always in the same position
 """
 
 
@@ -24,7 +19,7 @@ def __default_comparer(a, b):
 
 def mergesort(arr: list, compare_func: Callable = __default_comparer) -> None:
     """
-    Performs quicksort sorting over the chunk [low:high] of a given array.
+    Performs mergesort sorting over the given array.
 
     :param arr: (list) Input array
     :param compare_func (Callable) Function to compare elements inside the array
