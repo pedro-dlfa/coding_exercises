@@ -57,8 +57,9 @@ class Trie:
         self.__collect_children(node, prefix, results)
         return results
 
+    @staticmethod
     def __collect_children(
-        self, node: Optional[TrieNode], prefix: str, results: List[str]
+        node: Optional[TrieNode], prefix: str, results: List[str]
     ) -> None:
         """
         Traverses the trie to find all the nodes starting by a given prefix.
@@ -69,7 +70,7 @@ class Trie:
         if node.is_end:
             results.append(prefix)
         for char, child_node in node.children.items():
-            self.__collect_children(child_node, prefix + char, results)
+            Trie.__collect_children(child_node, prefix + char, results)
 
     def search(self, word) -> bool:
         """
