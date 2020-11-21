@@ -1,5 +1,5 @@
 class Bst:
-    """ Binary Search Tree
+    """Binary Search Tree
 
     Supports the following methods:
       - insert: adds a value to the BST
@@ -9,6 +9,7 @@ class Bst:
 
     class Node:
         """ BST Tree node """
+
         def __init__(self, key):
             self.left = None
             self.right = None
@@ -16,13 +17,13 @@ class Bst:
 
     def __init__(self):
         self.root = None
-        
+
     def insert(self, key):
         """
         Inserts a key in the BST
         """
-        self.root = Bst.__insert(self.root, key) 
-        
+        self.root = Bst.__insert(self.root, key)
+
     @staticmethod
     def __insert(node, key):
         if node is None:
